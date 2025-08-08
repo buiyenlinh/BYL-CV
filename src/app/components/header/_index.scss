@@ -1,0 +1,32 @@
+header {
+  @apply h-14  bg-white border-b border-gray-100;
+
+  .header__menu-link,
+  .header__theme {
+    @apply font-medium;
+  }
+}
+
+.header__menu--horizontal {
+  .header__menu-item {
+    @apply transition duration-200;
+
+    .header__menu-link.active {
+      @apply pb-4 border-b-2 border-solid border-amber-500 transition duration-200 text-amber-500;
+    }
+  }
+}
+
+.header__mobile .header__theme {
+  @apply px-4 py-3;
+}
+
+.header__menu--vertical {
+  .header__menu-item {
+    @apply w-full px-4 py-3 border-gray-100 border-b border-solid;
+
+    .header__menu-link.active {
+      @apply text-amber-500;
+    }
+  }
+}

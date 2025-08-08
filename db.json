@@ -1,1 +1,97 @@
-{}
+{
+  "Profile": {
+    "Id": 1,
+    "FullName": "Bui Yen Linh",
+    "EnglishName": "Lynn",
+    "Email": "bylyn0020@gmail.com",
+    "Phone": "036.2249.548",
+    "Address": "",
+    "Role": "Software Engineer",
+    "Introduction": "As an enthusiastic developer with a passion for building engaging user experiences, I have experience working within Scrum workflows and possess strong skills in building and integrating APIs using technologies such as ReactJS and C#. I am driven to create seamless interfaces that delight users. Eager to contribute and learn in a dynamic team, I am committed to optimizing workflows and fostering a culture of innovation.",
+    "Avatar": "/assets/images/avt.jpg",
+    "SocialLinks": {
+      "LinkedIn": "https://www.linkedin.com/in/your-linkedin",
+      "CV": "/assets/documents/BUI YEN LINH_CV.pdf"
+    }
+  },
+  "Experiences": [
+    {
+      "Id": 1,
+      "Company": "PTN GLOBAL - CAN THO",
+      "Position": "Software Engineer",
+      "StartDate": "March 2023",
+      "EndDate": "Present",
+      "Experiences": [
+        {
+          "BusinessDomains": "Government Services",
+          "Technologies": "ReactJs, TypeScript, ASP.NET, Mobx, React Kendo UI, Tailwind CSS, SCSS, SQL Server",
+          "Responsibilities": [
+            "Working with the Scrum master workflow.",
+            "Discussing with team members and customers to refine requirements.",
+            "Joining and contributing to evaluate and develop new ideas for the team's processes.",
+            "Using ASP.NET and SQL Server to write APIs.",
+            "Using and customizing React Kendo UI components, SCSS, and TailwindCSS to ensure consistent and responsive design.",
+            "Suggesting new UI/UX ideas for customers.",
+            "Enhancing logic and user experience.",
+            "Managing state with MobX.",
+            "Resolving feature issues.",
+            "Participating in code reviews and refactoring code as necessary to improve code quality and maintainability."
+          ]
+        },
+        {
+          "BusinessDomains": "AI Assistant",
+          "Technologies": "ReactJs, TypeScript, Tailwind CSS, SCSS, Material UI, Storybook, React Query",
+          "Responsibilities": [
+            "Developing UI/UX based on designs using MUI.",
+            "Using React Query to manage state.",
+            "Developing and maintaining a component library with Storybook for efficient UI component management and documentation."
+          ]
+        }
+      ]
+    },
+    {
+      "Id": 2,
+      "Company": "HAHALOLO - CAN THO",
+      "Position": "Software Engineer",
+      "Department": "Front-End",
+      "StartDate": "August 2022",
+      "EndDate": "March 2023",
+      "Technologies": "ReactJs, TypeScript, CSS, Tailwind CSS",
+      "Responsibilities": [
+        "Building new features based on designs and requirements.",
+        "Identifying root causes and fixing feature issues.",
+        "Collaborating with team members to discuss and find solutions for resolving problems.",
+        "Discussing technical aspects of new features.",
+        "Enhancing existing features."
+      ]
+    },
+    {
+      "Id": 3,
+      "Company": "MAYSOFT - CAN THO",
+      "Position": "Intern",
+      "Department": "Front-End",
+      "StartDate": "June 2022",
+      "EndDate": "August 2022",
+      "Technologies": "ReactJs, JavaScript",
+      "Responsibilities": [
+        "Using ReactJS and JavaScript to build new UI screens based on designs.",
+        "Identifying root causes and fixing issues."
+      ]
+    },
+    {
+      "Id": 4,
+      "Company": "LARAVAN - CAN THO",
+      "Position": "Software Engineer (Part-time)",
+      "Department": "Front-End",
+      "StartDate": "December 2020",
+      "EndDate": "June 2022",
+      "BusinessDomains": "Introduce and sale products",
+      "Technologies": "WordPress, HTML, CSS, JavaScript",
+      "Responsibilities": [
+        "Using WordPress to build websites.",
+        "Customizing UI with JavaScript and CSS.",
+        "Finding solutions for layout design."
+      ]
+    }
+  ]
+}

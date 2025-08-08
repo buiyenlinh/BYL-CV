@@ -6,7 +6,7 @@ const App = () => {
   return (
     <>
       <HeaderComponent />
-      <main>
+      <main className="h-[calc(100%-7rem)] w-full">
         <Outlet />
       </main>
       <FooterComponent />
