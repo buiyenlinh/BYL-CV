@@ -52,19 +52,18 @@ const ExperiencePage = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-screen-xl my-52">
-      <h1 className="text-3xl font-bold mb-8">Professional Experience</h1>
-      <div className="space-y-8">
-        {experiences.map((exp) => (
+    <div className="container mx-auto max-w-screen-xl h-full">
+      <div className="space-y-8 py-12">
+        {experiences.map((exp: Experience) => (
           <div
             key={exp.Id}
-            className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6"
+            className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 border-t border-[#f9f9f9]"
           >
             <div className="mb-4">
-              <h2 className="text-2xl font-semibold">{exp.Company}</h2>
-              <h3 className="text-xl text-gray-600 dark:text-gray-300">
+              <div className="text-2xl font-semibold">{exp.Company}</div>
+              <div className="text-xl text-gray-600 dark:text-gray-300">
                 {exp.Position}
-              </h3>
+              </div>
               <p className="text-gray-500">
                 {exp.StartDate} - {exp.EndDate}
               </p>
@@ -81,11 +80,11 @@ const ExperiencePage = () => {
                     Domain: {project.BusinessDomains}
                   </h4>
                   <p className="mb-2">
-                    <span className="font-medium">Technologies:</span>{" "}
+                    <span className="font-medium">Technologies: </span>
                     {project.Technologies}
                   </p>
                   <div className="mt-2">
-                    <h5 className="font-medium mb-1">Key Responsibilities:</h5>
+                    <h5 className="font-medium mb-1">Key Responsibilities: </h5>
                     <ul className="list-disc list-inside space-y-1">
                       {project.Responsibilities.map((resp, idx) => (
                         <li
@@ -104,12 +103,12 @@ const ExperiencePage = () => {
               <div className="mb-6">
                 {exp.BusinessDomains && (
                   <p className="mb-2">
-                    <span className="font-medium">Domain:</span>{" "}
+                    <span className="font-medium">Domain: </span>
                     {exp.BusinessDomains}
                   </p>
                 )}
                 <p className="mb-2">
-                  <span className="font-medium">Technologies:</span>{" "}
+                  <span className="font-medium">Technologies: </span>
                   {typeof exp.Technologies === "string"
                     ? exp.Technologies
                     : exp.Technologies.Technologies}

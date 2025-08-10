@@ -4,13 +4,13 @@ import { Outlet } from "react-router-dom";
 
 const App = () => {
   return (
-    <>
+    <div className="grid grid-rows-[3.5rem_1fr_3.5rem] h-screen overflow-hidden">
       <HeaderComponent />
-      <main className="h-[calc(100%-7rem)] w-full">
+      <main className="overflow-y-auto px-4">
         <Outlet />
       </main>
       <FooterComponent />
-    </>
+    </div>
   );
 };
 
