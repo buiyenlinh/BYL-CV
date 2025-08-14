@@ -6,8 +6,8 @@ export const menuData: IMenuItem[] = [
     link: "/",
   },
   {
-    name: "Experience",
-    link: "/experience",
+    name: "Experiences",
+    link: "/experiences",
   },
   {
     name: "Hobbies",

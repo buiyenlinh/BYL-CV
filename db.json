@@ -1,31 +1,31 @@
 {
-  "Profile": {
-    "Id": 1,
-    "FullName": "Bui Yen Linh",
-    "EnglishName": "Lynn",
-    "Email": "bylyn0020@gmail.com",
-    "Phone": "036.2249.548",
-    "Address": "",
-    "Role": "Software Engineer",
-    "Introduction": "As an enthusiastic developer with a passion for building engaging user experiences, I have experience working within Scrum workflows and possess strong skills in building and integrating APIs using technologies such as ReactJS and C#. I am driven to create seamless interfaces that delight users. Eager to contribute and learn in a dynamic team, I am committed to optimizing workflows and fostering a culture of innovation.",
-    "Avatar": "/assets/images/avt.jpg",
-    "SocialLinks": {
-      "LinkedIn": "https://www.linkedin.com/in/your-linkedin",
-      "CV": "/assets/documents/BUI YEN LINH_CV.pdf"
+  "profile": {
+    "id": 1,
+    "fullName": "Bui Yen Linh",
+    "englishName": "Lynn",
+    "email": "bylyn0020@gmail.com",
+    "phone": "036.2249.548",
+    "address": "",
+    "role": "Software Engineer",
+    "introduction": "As an enthusiastic developer with a passion for building engaging user experiences, I have experience working within Scrum workflows and possess strong skills in building and integrating APIs using technologies such as ReactJS and C#. I am driven to create seamless interfaces that delight users. Eager to contribute and learn in a dynamic team, I am committed to optimizing workflows and fostering a culture of innovation.",
+    "avatar": "/assets/images/avt.jpg",
+    "socialLinks": {
+      "linkedIn": "https://www.linkedin.com/in/your-linkedin",
+      "cv": "/assets/documents/BUI YEN LINH_CV.pdf"
     }
   },
-  "Experiences": [
+  "experiences": [
     {
-      "Id": 1,
-      "Company": "PTN GLOBAL - CAN THO",
-      "Position": "Software Engineer",
-      "StartDate": "March 2023",
-      "EndDate": "Present",
-      "Experiences": [
+      "id": 1,
+      "company": "PTN GLOBAL - CAN THO",
+      "position": "Software Engineer",
+      "startDate": "March 2023",
+      "endDate": "Present",
+      "experiences": [
         {
-          "BusinessDomains": "Government Services",
-          "Technologies": "ReactJs, TypeScript, ASP.NET, Mobx, React Kendo UI, Tailwind CSS, SCSS, SQL Server",
-          "Responsibilities": [
+          "businessDomains": "Government Services",
+          "technologies": "ReactJs, TypeScript, ASP.NET, Mobx, React Kendo UI, Tailwind CSS, SCSS, SQL Server",
+          "responsibilities": [
             "Working with the Scrum master workflow.",
             "Discussing with team members and customers to refine requirements.",
             "Joining and contributing to evaluate and develop new ideas for the team's processes.",
@@ -50,48 +50,103 @@
       ]
     },
     {
-      "Id": 2,
-      "Company": "HAHALOLO - CAN THO",
-      "Position": "Software Engineer",
-      "Department": "Front-End",
-      "StartDate": "August 2022",
-      "EndDate": "March 2023",
-      "Technologies": "ReactJs, TypeScript, CSS, Tailwind CSS",
-      "Responsibilities": [
-        "Building new features based on designs and requirements.",
-        "Identifying root causes and fixing feature issues.",
-        "Collaborating with team members to discuss and find solutions for resolving problems.",
-        "Discussing technical aspects of new features.",
-        "Enhancing existing features."
+      "id": 2,
+      "company": "HAHALOLO - CAN THO",
+      "position": "Software Engineer",
+      "department": "Front-End",
+      "startDate": "August 2022",
+      "endDate": "March 2023",
+      "experiences": [
+        {
+          "businessDomains": "",
+          "technologies": "ReactJs, TypeScript, CSS, Tailwind CSS",
+          "responsibilities": [
+            "Building new features based on designs and requirements.",
+            "Identifying root causes and fixing feature issues.",
+            "Collaborating with team members to discuss and find solutions for resolving problems.",
+            "Discussing technical aspects of new features.",
+            "Enhancing existing features."
+          ]
+        }
       ]
     },
     {
-      "Id": 3,
-      "Company": "MAYSOFT - CAN THO",
-      "Position": "Intern",
-      "Department": "Front-End",
-      "StartDate": "June 2022",
-      "EndDate": "August 2022",
-      "Technologies": "ReactJs, JavaScript",
-      "Responsibilities": [
-        "Using ReactJS and JavaScript to build new UI screens based on designs.",
-        "Identifying root causes and fixing issues."
+      "id": 3,
+      "company": "MAYSOFT - CAN THO",
+      "position": "Intern",
+      "department": "Front-End",
+      "startDate": "June 2022",
+      "endDate": "August 2022",
+      "experiences": [
+        {
+          "businessDomains": "",
+          "technologies": "ReactJs, JavaScript",
+          "responsibilities": [
+            "Using ReactJS and JavaScript to build new UI screens based on designs.",
+            "Identifying root causes and fixing issues."
+          ]
+        }
       ]
     },
     {
-      "Id": 4,
-      "Company": "LARAVAN - CAN THO",
-      "Position": "Software Engineer (Part-time)",
-      "Department": "Front-End",
-      "StartDate": "December 2020",
-      "EndDate": "June 2022",
-      "BusinessDomains": "Introduce and sale products",
-      "Technologies": "WordPress, HTML, CSS, JavaScript",
-      "Responsibilities": [
-        "Using WordPress to build websites.",
-        "Customizing UI with JavaScript and CSS.",
-        "Finding solutions for layout design."
+      "id": 4,
+      "company": "LARAVAN - CAN THO",
+      "position": "Software Engineer (Part-time)",
+      "department": "Front-End",
+      "startDate": "December 2020",
+      "endDate": "June 2022",
+      "experiences": [
+        {
+          "businessDomains": "Introduce and sale products",
+          "technologies": "WordPress, HTML, CSS, JavaScript",
+          "responsibilities": [
+            "Using WordPress to build websites.",
+            "Customizing UI with JavaScript and CSS.",
+            "Finding solutions for layout design."
+          ]
+        }
       ]
     }
-  ]
+  ],
+  "hobbies": [
+    {
+      "title": "Coding",
+      "description": "Passionate about creating and solving problems through programming.",
+      "icon": "💻"
+    },
+    {
+      "title": "Learning",
+      "description": "Always eager to acquire new knowledge and skills across various fields.",
+      "icon": "🎯"
+    },
+    {
+      "title": "Music",
+      "description": "Listening to music and singing are my ways to relax and express emotions.",
+      "icon": "🎵"
+    },
+    {
+      "title": "Sports",
+      "description": "Playing badminton helps me stay active and energetic.",
+      "icon": "🏸"
+    },
+    {
+      "title": "Reading",
+      "description": "Books are my gateway to knowledge and imagination.",
+      "icon": "📚"
+    },
+    {
+      "title": "Travel",
+      "description": "Exploring new places and experiencing different cultures.",
+      "icon": "✈️"
+    }
+  ],
+  "contact": {
+    "email": "bylyn0020@gmail.com",
+    "phone": "036.2249.548",
+    "address": "Cai Rang Ward, Can Tho City, Vietnam",
+    "university": "Can Tho University",
+    "major": "Software Engineering",
+    "startTime": "2018",
+    "graduationYear": "2022"
+  }
 }

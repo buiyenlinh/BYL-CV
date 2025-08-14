@@ -3,6 +3,7 @@ import avt from "@/assets/images/avt.jpg";
 import cv from "@/assets/documents/BUI YEN LINH_CV.pdf";
 import Loading from "@/app/components/common/loading/_index";
 import ErrorComponent from "@/app/components/common/error/_index";
+import { getProfile } from "@/mockapi/_index";
 
 // Function to resolve asset paths
 const resolveAssetPath = (path: string) => {
@@ -11,36 +12,28 @@ const resolveAssetPath = (path: string) => {
   return path;
 };
 
-interface ProfileData {
-  FullName: string;
-  Introduction: string;
-  Avatar: string;
-  SocialLinks: {
-    LinkedIn: string;
-    CV: string;
-  };
-}
+import type { IProfile } from "@/app/model";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const HomePage = () => {
-  const [profile, setProfile] = useState<ProfileData | null>(null);
+  const [profile, setProfile] = useState<IProfile | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   const loadProfile = async () => {
-    try {
-      const response = await fetch("http://localhost:3000/Profile");
-      if (!response.ok) {
-        throw new Error("Loading profile data failed.");
-      } else {
-        setError(null);
-      }
-      const data = await response.json();
-      setProfile(data);
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "An error occurred");
-    } finally {
-      setLoading(false);
-    }
+    getProfile()
+      .then((data: IProfile) => {
+        setProfile(data);
+        setError("");
+      })
+      .catch(() => {
+        setError("Loading profile data failed.");
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   useEffect(() => {
@@ -52,12 +45,7 @@ const HomePage = () => {
   }
 
   if (error) {
-    return (
-      <ErrorComponent
-        title={"Loading profile data failed."}
-        onReload={loadProfile}
-      />
-    );
+    return <ErrorComponent title={error} onReload={loadProfile} />;
   }
 
   if (!profile) {
@@ -69,56 +57,41 @@ const HomePage = () => {
   }
 
   return (
-    <div className="home container mx-auto px-4 max-w-screen-xl h-full">
-      <div className="flex items-center justify-center h-full">
+    <div className="home container mx-auto py-4 max-w-screen-xl h-full">
+      <div className="flex items-center justify-center py-12 lg:h-full">
         <div className="home__intro flex flex-col md:flex-row items-center gap-8 h-full">
           <div className="home__intro-avatar w-48 h-48 rounded-full overflow-hidden">
             <img
-              src={resolveAssetPath(profile.Avatar)}
-              alt={profile.FullName}
-              className="w-full h-full object-cover"
+              src={resolveAssetPath(profile.avatar)}
+              alt={profile.fullName}
+              className="w-full h-full object-cover hover:scale-125 transition-transform duration-500"
             />
           </div>
 
           <div className="home__intro-content max-w-2xl">
-            <h1 className="text-4xl font-bold mb-4">{profile?.FullName}</h1>
-            <p className="text-lg mb-6 text-justify">{profile?.Introduction}</p>
+            <h1 className="text-4xl font-bold mb-4 text-center sm:text-center lg:text-start">
+              {profile?.fullName}
+            </h1>
+            <div className="text-lg font-bold mb-4">{profile?.role}</div>
+            <p className="text-lg mb-6 text-justify">{profile?.introduction}</p>
 
-            <div className="home__intro-links flex gap-4">
+            <div className="home__intro-links flex gap-4 justify-center sm:justify-center lg:justify-start">
               <a
-                href={profile?.SocialLinks.LinkedIn}
+                href={profile?.socialLinks.linkedIn}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
               >
-                <svg
-                  className="w-5 h-5"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </svg>
+                <FontAwesomeIcon className="w-5 h-5" icon={faLinkedin} />
                 LinkedIn
               </a>
 
               <a
-                href={resolveAssetPath(profile?.SocialLinks.CV)}
+                href={resolveAssetPath(profile?.socialLinks.cv)}
                 download="BUI YEN LINH_CV.pdf"
                 className="inline-flex items-center gap-2 px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 transition-colors"
               >
-                <svg
-                  className="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                  />
-                </svg>
+                <FontAwesomeIcon className="w-5 h-5" icon={faFileArrowDown} />
                 Download CV
               </a>
             </div>
